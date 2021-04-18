@@ -16,6 +16,9 @@ describe('TextInput component', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         border: 1px solid var(--border-color);
+        background-color: var(--header-secondary-color);
+        opacity: 0.7;
+        height: 40px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -25,21 +28,22 @@ describe('TextInput component', () => {
         -ms-flex-align: center;
         align-items: center;
         border-radius: 0.25rem;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         font-family: 'Roboto',sans-serif;
         font-size: 1rem;
-      }
-
-      .c0:focus-within {
-        outline: 1px auto var(--focus-color);
       }
 
       .c1 {
         border: none;
         background: transparent;
+        color: var(--white-color);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         border-radius: 0;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
         font-family: 'Roboto',sans-serif;
         font-size: 1rem;
       }
