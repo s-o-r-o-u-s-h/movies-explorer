@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Image from '../Image';
+import { Image } from '../Images';
 import { Movie } from '../../../models/api/Movie';
 import { H6 } from '../Typography';
 import SmallText from '../Typography/SmallText';

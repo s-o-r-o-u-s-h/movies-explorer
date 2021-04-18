@@ -17,19 +17,22 @@ describe('MovieBox component', () => {
         width: 150px;
         height: auto;
         display: block;
-        border-radius: 0.25rem;
       }
 
       .c2 {
+        border-radius: 0.25rem;
+      }
+
+      .c3 {
         font-weight: bold;
         line-height: 1.125;
       }
 
-      .c3 {
+      .c4 {
         font-size: 1rem;
       }
 
-      .c4 {
+      .c5 {
         font-size: 0.85rem;
         font-weight: normal;
       }
@@ -48,7 +51,8 @@ describe('MovieBox component', () => {
       >
         <img
           alt="Godzilla vs. Kong"
-          class="c1"
+          class="c1 c2"
+          size="150"
           src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
           title="Godzilla vs. Kong"
         />
@@ -56,12 +60,12 @@ describe('MovieBox component', () => {
           class="mv-1"
         >
           <div
-            class="c2 c3"
+            class="c3 c4"
           >
             Godzilla vs. Kong
           </div>
           <div
-            class="c4 mv-1"
+            class="c5 mv-1"
           >
             2021-03-24
           </div>

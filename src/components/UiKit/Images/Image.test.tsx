@@ -15,12 +15,16 @@ describe('Image component', () => {
         width: 150px;
         height: auto;
         display: block;
+      }
+
+      .c1 {
         border-radius: 0.25rem;
       }
 
       <img
         alt="mocked-alt"
-        class="c0"
+        class="c0 c1"
+        size="150"
         src="https://mocked-string"
         title="mocked-alt"
       />
