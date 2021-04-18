@@ -9,8 +9,10 @@ const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 16px;
     --black-color: #000000;
-    --header-color: #fff0aa;
-    --border-color: #d4c26a;
+    --white-color: #ffffff;
+    --header-color: #897BAF;
+    --header-secondary-color: #281758;
+    --border-color: #605292;
     --focus-color: #aa9639;
   }
   
