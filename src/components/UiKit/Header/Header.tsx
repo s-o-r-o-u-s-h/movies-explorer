@@ -30,7 +30,7 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-const Header: React.FC = () => {
+const Header: React.VFC = () => {
   return (
     <HeaderContainer>
       <HeaderWrapper className="p-2">

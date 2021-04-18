@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TextInput from './TextInput';
 import IconButton from '../IconButton';
 import useOutsideClick from '../../../hooks/useOutsideClick';
+import { MovieResultContainer } from '../MovieSearchResult';
 
 interface Props {
   onChangeQuery: (value: string) => void;
@@ -23,14 +24,17 @@ const SearchInput: React.VFC<Props> = ({ onChangeQuery, placeholder }) => {
 
   if (isExpanded) {
     return (
-      <TextInput
-        ref={inputRef}
-        autoFocus
-        onChange={onChangeTextValue}
-        value={value}
-        icon="search"
-        placeholder={placeholder}
-      />
+      <>
+        <TextInput
+          ref={inputRef}
+          autoFocus
+          onChange={onChangeTextValue}
+          value={value}
+          icon="search"
+          placeholder={placeholder}
+        />
+        {value.length > 2 && <MovieResultContainer items={[]} />}
+      </>
     );
   } else {
     return <IconButton icon="search" onPress={() => setExpanded(true)} />;
