@@ -33,19 +33,44 @@ const GlobalStyle = createGlobalStyle`
     margin: 2rem !important;
   }
   .mh-1 {
-    margin: 0 0.25rem !important;
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
   }
   .mh-2 {
-    margin: 0 0.5rem !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
   }
   .mh-3 {
-    margin: 0 1rem !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
   }
   .mh-4 {
-    margin: 0 1.5rem !important;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
   }
   .mh-5 {
-    margin: 0 2rem !important;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+  .mv-1 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .mv-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .mv-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .mv-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .mv-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
   }
   .p-1 {
     padding: 0.25rem !important;
@@ -63,19 +88,44 @@ const GlobalStyle = createGlobalStyle`
     padding: 2rem !important;
   }
   .ph-1 {
-    padding: 0 0.25rem !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
   }
   .ph-2 {
-    padding: 0 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   .ph-3 {
-    padding: 0 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   .ph-4 {
-    padding: 0 1.5rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
   .ph-5 {
-    padding: 0 2rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  .pv-1 {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .pv-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .pv-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .pv-4 {
+    padding-top: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  .pv-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 `;
 
