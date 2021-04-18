@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface Props {
   size?: number;
+  alt: string;
 }
 
 const BaseImage = styled.img<Props>`
