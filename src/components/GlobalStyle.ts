@@ -9,6 +9,9 @@ const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 16px;
     --black-color: #000000;
+    --header-color: #fff0aa;
+    --border-color: #d4c26a;
+    --focus-color: #aa9639;
   }
   
   body {

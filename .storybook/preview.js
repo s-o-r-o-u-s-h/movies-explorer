@@ -1,5 +1,14 @@
 import * as React from 'react';
 import GlobalStyle from '../src/components/GlobalStyle';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCalculator,
+  faCoffee,
+  faSearch,
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas, faCoffee, faSearch, faCalculator);
 
 export const decorators = [
   Story => (
