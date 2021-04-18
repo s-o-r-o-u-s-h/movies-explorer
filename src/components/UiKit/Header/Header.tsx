@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Logo from '../Logo';
+import { Logo } from '../Images';
 import { SearchInput } from '../Inputs';
 
 const HeaderContainer = styled.header`

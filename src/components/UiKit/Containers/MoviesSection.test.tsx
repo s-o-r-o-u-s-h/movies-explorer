@@ -33,7 +33,7 @@ describe('MoviesSection component', () => {
         font-size: 2rem;
       }
 
-      .c5 {
+      .c6 {
         font-size: 1rem;
       }
 
@@ -41,10 +41,13 @@ describe('MoviesSection component', () => {
         width: 150px;
         height: auto;
         display: block;
+      }
+
+      .c5 {
         border-radius: 0.25rem;
       }
 
-      .c6 {
+      .c7 {
         font-size: 0.85rem;
         font-weight: normal;
       }
@@ -86,7 +89,8 @@ describe('MoviesSection component', () => {
           >
             <img
               alt="Godzilla vs. Kong"
-              class="c4"
+              class="c4 c5"
+              size="150"
               src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
               title="Godzilla vs. Kong"
             />
@@ -94,12 +98,12 @@ describe('MoviesSection component', () => {
               class="mv-1"
             >
               <div
-                class="c0 c5"
+                class="c0 c6"
               >
                 Godzilla vs. Kong
               </div>
               <div
-                class="c6 mv-1"
+                class="c7 mv-1"
               >
                 2021-03-24
               </div>
@@ -111,7 +115,8 @@ describe('MoviesSection component', () => {
           >
             <img
               alt="Godzilla vs. Kong"
-              class="c4"
+              class="c4 c5"
+              size="150"
               src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
               title="Godzilla vs. Kong"
             />
@@ -119,12 +124,12 @@ describe('MoviesSection component', () => {
               class="mv-1"
             >
               <div
-                class="c0 c5"
+                class="c0 c6"
               >
                 Godzilla vs. Kong
               </div>
               <div
-                class="c6 mv-1"
+                class="c7 mv-1"
               >
                 2021-03-24
               </div>
