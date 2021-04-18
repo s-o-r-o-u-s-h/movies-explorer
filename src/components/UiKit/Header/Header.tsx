@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Logo from '../Logo';
-import SearchInput from '../Inputs/SearchInput';
+import { SearchInput } from '../Inputs';
 
 const HeaderContainer = styled.header`
   background-color: var(--header-color);
