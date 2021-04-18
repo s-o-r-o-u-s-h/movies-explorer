@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
   :root {
     font-size: 16px;
+    --gray-color: #efefef;
     --black-color: #000000;
     --white-color: #ffffff;
     --header-color: #897BAF;
