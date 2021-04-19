@@ -70,4 +70,4 @@ TextInput.defaultProps = {
   ariaLabel: 'input',
 };
 
-export default TextInput;
+export default React.memo(TextInput);

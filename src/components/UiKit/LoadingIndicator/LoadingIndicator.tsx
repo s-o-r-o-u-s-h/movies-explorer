@@ -26,4 +26,4 @@ LoadingIndicator.defaultProps = {
   size: 'lg',
 };
 
-export default LoadingIndicator;
+export default React.memo(LoadingIndicator);

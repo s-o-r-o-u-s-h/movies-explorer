@@ -57,4 +57,4 @@ MovieDetails.defaultProps = {
   loading: false,
 };
 
-export default MovieDetails;
+export default React.memo(MovieDetails);

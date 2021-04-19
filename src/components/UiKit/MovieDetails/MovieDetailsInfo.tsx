@@ -73,4 +73,4 @@ const MovieDetailsInfo: React.VFC<Props> = ({ item }) => {
   );
 };
 
-export default MovieDetailsInfo;
+export default React.memo(MovieDetailsInfo);

@@ -59,4 +59,4 @@ Container.defaultProps = {
   emptyText: 'No results',
 };
 
-export default Container;
+export default React.memo(Container);

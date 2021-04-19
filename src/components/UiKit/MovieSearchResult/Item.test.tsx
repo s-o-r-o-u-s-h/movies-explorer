@@ -11,6 +11,7 @@ describe('MovieResultItem component', () => {
       poster_path:
         'https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
+    onPress: jest.fn(),
   };
   it('should render MovieResult item', function () {
     const { container } = render(<Item {...props} />);

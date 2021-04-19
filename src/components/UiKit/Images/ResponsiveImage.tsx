@@ -1,3 +1,4 @@
+import * as React from 'react';
 import styled from 'styled-components';
 import BaseImage from './BaseImage';
 
@@ -7,4 +8,4 @@ const ResponsiveImage = styled(BaseImage)`
   }
 `;
 
-export default ResponsiveImage;
+export default React.memo(ResponsiveImage);

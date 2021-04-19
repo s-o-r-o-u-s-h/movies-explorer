@@ -47,4 +47,4 @@ const Item: React.VFC<Props> = ({
   );
 };
 
-export default Item;
+export default React.memo(Item);

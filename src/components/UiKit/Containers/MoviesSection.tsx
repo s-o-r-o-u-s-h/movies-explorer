@@ -53,4 +53,4 @@ MoviesSection.defaultProps = {
   emptyText: 'No results',
 };
 
-export default MoviesSection;
+export default React.memo(MoviesSection);

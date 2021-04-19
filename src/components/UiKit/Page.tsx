@@ -13,4 +13,4 @@ const Page: React.FC = ({ children }) => {
   );
 };
 
-export default Page;
+export default React.memo(Page);
