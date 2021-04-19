@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import LoadingIndicator from './LoadingIndicator';
 
 export default {
-  title: 'Loading',
+  title: 'LoadingIndicators/Basic',
   component: LoadingIndicator,
 } as Meta;
 

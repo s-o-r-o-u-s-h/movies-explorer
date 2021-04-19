@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import LoadingIndicator from '../LoadingIndicator';
 import { Movie } from '../../../models/api/Movie';
 import Item from './Item';
 import { H6 } from '../Typography';
+import CenteredElement from '../CenteredElement';
+import { CenteredLoading } from '../LoadingIndicator';
 
 interface Props {
   loading?: boolean;
@@ -31,17 +32,11 @@ const StyledContainer = styled.div`
   }
 `;
 
-const CenteredElement = styled.div`
-  text-align: center;
-`;
-
 const Container: React.VFC<Props> = ({ loading, emptyText, items }) => {
   return (
     <StyledContainer className="p-1">
       {loading ? (
-        <CenteredElement>
-          <LoadingIndicator size="2x" />
-        </CenteredElement>
+        <CenteredLoading />
       ) : items.length > 0 ? (
         items.map(item => <Item item={item} onPress={() => {}} key={item.id} />)
       ) : (

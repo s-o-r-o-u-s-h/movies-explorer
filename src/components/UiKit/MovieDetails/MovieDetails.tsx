@@ -4,7 +4,8 @@ import { MovieInfo } from '../../../models/MovieInfo';
 import { BaseImage } from '../Images';
 import { H3, H6 } from '../Typography';
 import MovieDetailsInfo from './MovieDetailsInfo';
-import LoadingIndicator from '../LoadingIndicator';
+import CenteredElement from '../CenteredElement';
+import { CenteredLoading } from '../LoadingIndicator';
 
 interface Props {
   item: MovieInfo | null;
@@ -28,17 +29,11 @@ const StyledContainer = styled.div`
   }
 `;
 
-const CenteredElement = styled.div`
-  text-align: center;
-`;
-
 const MovieDetails: React.VFC<Props> = ({ item, loading }) => {
   return (
     <div>
       {loading ? (
-        <CenteredElement>
-          <LoadingIndicator size="2x" />
-        </CenteredElement>
+        <CenteredLoading />
       ) : item ? (
         <>
           <H3>{item.title}</H3>

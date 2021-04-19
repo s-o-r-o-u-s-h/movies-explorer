@@ -3,7 +3,8 @@ import { H3, H6 } from '../Typography';
 import styled from 'styled-components';
 import { Movie } from '../../../models/api/Movie';
 import MovieBox from './MovieBox';
-import LoadingIndicator from '../LoadingIndicator';
+import CenteredElement from '../CenteredElement';
+import { CenteredLoading } from '../LoadingIndicator';
 
 interface Props {
   title: string;
@@ -20,10 +21,6 @@ const StyledList = styled.div`
   }
 `;
 
-const CenteredElement = styled.div`
-  text-align: center;
-`;
-
 const MoviesSection: React.VFC<Props> = ({
   title,
   items,
@@ -34,9 +31,7 @@ const MoviesSection: React.VFC<Props> = ({
     <div>
       <H3 className="ph-2">{title}</H3>
       {loading ? (
-        <CenteredElement>
-          <LoadingIndicator size="2x" />
-        </CenteredElement>
+        <CenteredLoading />
       ) : items.length === 0 ? (
         <CenteredElement>
           <H6>{emptyText}</H6>
