@@ -14,8 +14,8 @@ import { CenteredLoading } from './UiKit/LoadingIndicator';
 library.add(fas, faCoffee, faSearch, faCalculator);
 
 const Main = React.lazy(() => import('./Pages/MainPage'));
-const MovieDetails = React.lazy(() => import('./Pages/MainPage'));
-const NotFound = React.lazy(() => import('./Pages/MainPage'));
+const MovieDetails = React.lazy(() => import('./Pages/MovieDetailsPage'));
+const NotFound = React.lazy(() => import('./Pages/NotFoundPage'));
 
 const App: React.VFC = () => {
   return (
