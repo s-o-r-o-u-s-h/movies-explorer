@@ -16,7 +16,7 @@ interface Props {
 const StyledList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  & > a {
+  & > div {
     margin: 0.5rem;
   }
 `;

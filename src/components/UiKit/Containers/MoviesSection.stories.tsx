@@ -1,10 +1,18 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 import MoviesSection from './MoviesSection';
+import { MemoryRouter } from 'react-router-dom';
 
 export default {
   title: 'Containers/MoviesSection',
   component: MoviesSection,
+  decorators: [
+    Story => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<React.ComponentProps<typeof MoviesSection>> = args => (

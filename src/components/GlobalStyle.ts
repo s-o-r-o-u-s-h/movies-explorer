@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
   .m-5 {
     margin: 2rem !important;
   }
+  .mh-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   .mh-1 {
     margin-left: 0.25rem !important;
     margin-right: 0.25rem !important;
