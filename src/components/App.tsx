@@ -7,9 +7,11 @@ import {
   faCoffee,
   faSearch,
 } from '@fortawesome/free-solid-svg-icons';
+import { Provider } from 'react-redux';
 
 import Header from './UiKit/Header/Header';
 import { CenteredLoading } from './UiKit/LoadingIndicator';
+import store from '../store/store';
 
 library.add(fas, faCoffee, faSearch, faCalculator);
 
@@ -19,16 +21,18 @@ const NotFound = React.lazy(() => import('./Pages/NotFoundPage'));
 
 const App: React.VFC = () => {
   return (
-    <Router>
-      <Header />
-      <React.Suspense fallback={<CenteredLoading />}>
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Route path="/movie/:id" component={MovieDetails} />
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </React.Suspense>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <React.Suspense fallback={<CenteredLoading />}>
+          <Switch>
+            <Route path="/" exact component={Main} />
+            <Route path="/movie/:id" component={MovieDetails} />
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </React.Suspense>
+      </Router>
+    </Provider>
   );
 };
 

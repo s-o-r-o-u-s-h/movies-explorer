@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Image } from '../Images';
-import { Movie } from '../../../models/api/Movie';
 import { H6 } from '../Typography';
 import SmallText from '../Typography/SmallText';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import MoviePartial from '../../../models/api/MoviePartial';
 
 interface Props {
-  item: Pick<Movie, 'poster_path' | 'title' | 'release_date' | 'id'>;
+  item: MoviePartial;
 }
 
 const StyledLink = styled.div`
