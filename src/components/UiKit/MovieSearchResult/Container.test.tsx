@@ -124,6 +124,10 @@ describe('MovieResultContainer component', () => {
     );
     getByRole('alert');
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c1 {
+        text-align: center;
+      }
+
       .c0 {
         position: absolute;
         top: 100%;
@@ -140,10 +144,6 @@ describe('MovieResultContainer component', () => {
 
       .c0 > a:last-child {
         border-bottom: unset;
-      }
-
-      .c1 {
-        text-align: center;
       }
 
       @media (max-width:720px) {
@@ -187,6 +187,10 @@ describe('MovieResultContainer component', () => {
         font-size: 1rem;
       }
 
+      .c1 {
+        text-align: center;
+      }
+
       .c0 {
         position: absolute;
         top: 100%;
@@ -203,10 +207,6 @@ describe('MovieResultContainer component', () => {
 
       .c0 > a:last-child {
         border-bottom: unset;
-      }
-
-      .c1 {
-        text-align: center;
       }
 
       @media (max-width:720px) {
