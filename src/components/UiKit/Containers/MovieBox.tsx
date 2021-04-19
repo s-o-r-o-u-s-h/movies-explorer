@@ -33,4 +33,4 @@ const MovieBox: React.VFC<Props> = ({ item }) => {
   );
 };
 
-export default MovieBox;
+export default React.memo(MovieBox);

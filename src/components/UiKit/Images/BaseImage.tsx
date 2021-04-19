@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as React from 'react';
 
 interface Props {
   size?: number;
@@ -15,4 +16,4 @@ BaseImage.defaultProps = {
   size: 140,
 };
 
-export default BaseImage;
+export default React.memo(BaseImage);

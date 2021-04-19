@@ -15,4 +15,4 @@ const Image: React.VFC<Props> = ({ url, alt }) => {
   return <StyledImage size={150} src={url} alt={alt} title={alt} />;
 };
 
-export default Image;
+export default React.memo(Image);

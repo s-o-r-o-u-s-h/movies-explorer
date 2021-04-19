@@ -24,7 +24,8 @@ Basic.args = {
   item: {
     title: 'Godzilla vs. Kong',
     release_date: '2021-03-24',
-    poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+    poster_path:
+      'https://image.tmdb.org/t/p/w500/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     id: 22,
   },
 };

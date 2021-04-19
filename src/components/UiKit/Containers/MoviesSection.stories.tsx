@@ -27,25 +27,29 @@ Basic.args = {
       id: 100,
       title: 'Godzilla vs. Kong',
       release_date: '2021-03-24',
-      poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+      poster_path:
+        'https://image.tmdb.org/t/p/w500/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
     {
       id: 101,
       title: 'Godzilla vs. Kong',
       release_date: '2021-03-24',
-      poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+      poster_path:
+        'https://image.tmdb.org/t/p/w500/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
     {
       id: 102,
       title: 'Godzilla vs. Kong',
       release_date: '2021-03-24',
-      poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+      poster_path:
+        'https://image.tmdb.org/t/p/w500/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
     {
       id: 103,
       title: 'Godzilla vs. Kong',
       release_date: '2021-03-24',
-      poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+      poster_path:
+        'https://image.tmdb.org/t/p/w500/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
   ],
   loading: false,

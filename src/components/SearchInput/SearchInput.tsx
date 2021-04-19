@@ -50,4 +50,4 @@ const SearchInput: React.VFC<Props> = ({ onChangeQuery, placeholder }) => {
   }
 };
 
-export default SearchInput;
+export default React.memo(SearchInput);
