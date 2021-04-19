@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render } from '../../../utils/testUtils';
 import MoviesSection from './MoviesSection';
 
 describe('MoviesSection component', () => {
@@ -52,7 +52,7 @@ describe('MoviesSection component', () => {
         font-weight: normal;
       }
 
-      .c3 {
+      .c3 a {
         -webkit-text-decoration: none;
         text-decoration: none;
         width: 150px;
@@ -70,7 +70,7 @@ describe('MoviesSection component', () => {
         flex-wrap: wrap;
       }
 
-      .c2 > a {
+      .c2 > div {
         margin: 0.5rem;
       }
 
@@ -83,58 +83,64 @@ describe('MoviesSection component', () => {
         <div
           class="c2"
         >
-          <a
+          <div
             class="c3"
-            href="#"
           >
-            <img
-              alt="Godzilla vs. Kong"
-              class="c4 c5"
-              size="150"
-              src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
-              title="Godzilla vs. Kong"
-            />
-            <div
-              class="mv-1"
+            <a
+              href="/movie/100"
             >
+              <img
+                alt="Godzilla vs. Kong"
+                class="c4 c5"
+                size="150"
+                src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+                title="Godzilla vs. Kong"
+              />
               <div
-                class="c0 c6"
+                class="mv-1"
               >
-                Godzilla vs. Kong
+                <div
+                  class="c0 c6"
+                >
+                  Godzilla vs. Kong
+                </div>
+                <div
+                  class="c7 mv-1"
+                >
+                  2021-03-24
+                </div>
               </div>
-              <div
-                class="c7 mv-1"
-              >
-                2021-03-24
-              </div>
-            </div>
-          </a>
-          <a
+            </a>
+          </div>
+          <div
             class="c3"
-            href="#"
           >
-            <img
-              alt="Godzilla vs. Kong"
-              class="c4 c5"
-              size="150"
-              src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
-              title="Godzilla vs. Kong"
-            />
-            <div
-              class="mv-1"
+            <a
+              href="/movie/101"
             >
+              <img
+                alt="Godzilla vs. Kong"
+                class="c4 c5"
+                size="150"
+                src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+                title="Godzilla vs. Kong"
+              />
               <div
-                class="c0 c6"
+                class="mv-1"
               >
-                Godzilla vs. Kong
+                <div
+                  class="c0 c6"
+                >
+                  Godzilla vs. Kong
+                </div>
+                <div
+                  class="c7 mv-1"
+                >
+                  2021-03-24
+                </div>
               </div>
-              <div
-                class="c7 mv-1"
-              >
-                2021-03-24
-              </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     `);

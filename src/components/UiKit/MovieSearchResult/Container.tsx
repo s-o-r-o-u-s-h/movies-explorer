@@ -24,10 +24,10 @@ const StyledContainer = styled.div`
     top: calc(100% + 40px) !important;
   }
   background-color: var(--gray-color);
-  & > a {
+  & > div {
     border-bottom: 1px solid var(--border-color);
   }
-  & > a:last-child {
+  & > div:last-child {
     border-bottom: unset;
   }
 `;
@@ -38,7 +38,7 @@ const Container: React.VFC<Props> = ({ loading, emptyText, items }) => {
       {loading ? (
         <CenteredLoading />
       ) : items.length > 0 ? (
-        items.map(item => <Item item={item} onPress={() => {}} key={item.id} />)
+        items.map(item => <Item item={item} key={item.id} />)
       ) : (
         <CenteredElement>
           <H6>{emptyText}</H6>

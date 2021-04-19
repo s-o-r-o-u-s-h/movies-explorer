@@ -6,8 +6,12 @@ describe('Page component', () => {
   it('should render a Page', function () {
     const { container } = render(<Page />);
     expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        max-width: 1200px;
+      }
+
       <div
-        class="ph-4 pv-5"
+        class="c0 mh-auto pv-5"
       />
     `);
   });

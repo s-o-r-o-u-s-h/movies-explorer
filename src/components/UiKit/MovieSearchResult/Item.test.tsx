@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { render, fireEvent } from '../../../utils/testUtils';
 import Item from './Item';
 
 describe('MovieResultItem component', () => {
@@ -11,7 +11,6 @@ describe('MovieResultItem component', () => {
       poster_path:
         'https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
     },
-    onPress: jest.fn(),
   };
   it('should render MovieResult item', function () {
     const { container } = render(<Item {...props} />);
@@ -36,7 +35,7 @@ describe('MovieResultItem component', () => {
         font-weight: normal;
       }
 
-      .c0 {
+      .c0 a {
         -webkit-text-decoration: none;
         text-decoration: none;
         color: var(--black-color);
@@ -50,41 +49,45 @@ describe('MovieResultItem component', () => {
         cursor: pointer;
       }
 
-      .c0 > img {
+      .c0 a > img {
         min-width: 6rem;
         width: 15%;
         border-radius: 0.25rem;
       }
 
-      .c0 > div {
+      .c0 a > div {
         width: 85%;
       }
 
-      <a
+      <div
         class="c0 p-1"
       >
-        <img
-          alt="Godzilla vs. Kong"
-          class="c1"
-          size="140"
-          src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
-          title="Godzilla vs. Kong"
-        />
-        <div
-          class="ph-2"
+        <a
+          href="/movie/51"
         >
+          <img
+            alt="Godzilla vs. Kong"
+            class="c1"
+            size="140"
+            src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+            title="Godzilla vs. Kong"
+          />
           <div
-            class="c2 c3 mv-2"
+            class="ph-2"
           >
-            Godzilla vs. Kong
+            <div
+              class="c2 c3 mv-2"
+            >
+              Godzilla vs. Kong
+            </div>
+            <div
+              class="c4"
+            >
+              2021-03-24
+            </div>
           </div>
-          <div
-            class="c4"
-          >
-            2021-03-24
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     `);
   });
 
@@ -94,9 +97,9 @@ describe('MovieResultItem component', () => {
     getByText(props.item.release_date);
   });
 
-  it('should handle onPress events', function () {
-    const { getByText } = render(<Item {...props} />);
-    fireEvent.click(getByText(props.item.title));
-    expect(props.onPress).toHaveBeenCalledWith(props.item.id);
+  it('should navigate when is clicked', function () {
+    const { getByRole } = render(<Item {...props} />);
+    fireEvent.click(getByRole('link'));
+    expect(window.location.pathname).toBe(`/movie/${props.item.id}`);
   });
 });

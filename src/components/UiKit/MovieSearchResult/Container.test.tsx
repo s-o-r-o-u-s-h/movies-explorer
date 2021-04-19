@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render } from '../../../utils/testUtils';
 import Container from './Container';
 
 describe('MovieResultContainer component', () => {
@@ -37,7 +37,7 @@ describe('MovieResultContainer component', () => {
         font-weight: normal;
       }
 
-      .c1 {
+      .c1 a {
         -webkit-text-decoration: none;
         text-decoration: none;
         color: var(--black-color);
@@ -51,13 +51,13 @@ describe('MovieResultContainer component', () => {
         cursor: pointer;
       }
 
-      .c1 > img {
+      .c1 a > img {
         min-width: 6rem;
         width: 15%;
         border-radius: 0.25rem;
       }
 
-      .c1 > div {
+      .c1 a > div {
         width: 85%;
       }
 
@@ -71,11 +71,11 @@ describe('MovieResultContainer component', () => {
         background-color: var(--gray-color);
       }
 
-      .c0 > a {
+      .c0 > div {
         border-bottom: 1px solid var(--border-color);
       }
 
-      .c0 > a:last-child {
+      .c0 > div:last-child {
         border-bottom: unset;
       }
 
@@ -89,31 +89,35 @@ describe('MovieResultContainer component', () => {
       <div
         class="c0 p-1"
       >
-        <a
+        <div
           class="c1 p-1"
         >
-          <img
-            alt="Godzilla vs. Kong"
-            class="c2"
-            size="140"
-            src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
-            title="Godzilla vs. Kong"
-          />
-          <div
-            class="ph-2"
+          <a
+            href="/movie/53"
           >
+            <img
+              alt="Godzilla vs. Kong"
+              class="c2"
+              size="140"
+              src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+              title="Godzilla vs. Kong"
+            />
             <div
-              class="c3 c4 mv-2"
+              class="ph-2"
             >
-              Godzilla vs. Kong
+              <div
+                class="c3 c4 mv-2"
+              >
+                Godzilla vs. Kong
+              </div>
+              <div
+                class="c5"
+              >
+                2021-03-24
+              </div>
             </div>
-            <div
-              class="c5"
-            >
-              2021-03-24
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     `);
   });
@@ -138,11 +142,11 @@ describe('MovieResultContainer component', () => {
         background-color: var(--gray-color);
       }
 
-      .c0 > a {
+      .c0 > div {
         border-bottom: 1px solid var(--border-color);
       }
 
-      .c0 > a:last-child {
+      .c0 > div:last-child {
         border-bottom: unset;
       }
 
@@ -201,11 +205,11 @@ describe('MovieResultContainer component', () => {
         background-color: var(--gray-color);
       }
 
-      .c0 > a {
+      .c0 > div {
         border-bottom: 1px solid var(--border-color);
       }
 
-      .c0 > a:last-child {
+      .c0 > div:last-child {
         border-bottom: unset;
       }
 

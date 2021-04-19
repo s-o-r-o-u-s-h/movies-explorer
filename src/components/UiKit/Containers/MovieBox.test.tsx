@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '../../../utils/testUtils';
 import MovieBox from './MovieBox';
 
 describe('MovieBox component', () => {
@@ -8,6 +8,7 @@ describe('MovieBox component', () => {
       title: 'Godzilla vs. Kong',
       release_date: '2021-03-24',
       poster_path: '/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
+      id: 10,
     },
   };
   it('should render MovieBox', function () {
@@ -37,7 +38,7 @@ describe('MovieBox component', () => {
         font-weight: normal;
       }
 
-      .c0 {
+      .c0 a {
         -webkit-text-decoration: none;
         text-decoration: none;
         width: 150px;
@@ -45,32 +46,35 @@ describe('MovieBox component', () => {
         display: block;
       }
 
-      <a
+      <div
         class="c0"
-        href="#"
       >
-        <img
-          alt="Godzilla vs. Kong"
-          class="c1 c2"
-          size="150"
-          src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
-          title="Godzilla vs. Kong"
-        />
-        <div
-          class="mv-1"
+        <a
+          href="/movie/10"
         >
+          <img
+            alt="Godzilla vs. Kong"
+            class="c1 c2"
+            size="150"
+            src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+            title="Godzilla vs. Kong"
+          />
           <div
-            class="c3 c4"
+            class="mv-1"
           >
-            Godzilla vs. Kong
+            <div
+              class="c3 c4"
+            >
+              Godzilla vs. Kong
+            </div>
+            <div
+              class="c5 mv-1"
+            >
+              2021-03-24
+            </div>
           </div>
-          <div
-            class="c5 mv-1"
-          >
-            2021-03-24
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     `);
   });
 
@@ -79,5 +83,11 @@ describe('MovieBox component', () => {
     getByText(props.item.title);
     getByText(props.item.release_date);
     getByAltText(props.item.title);
+  });
+
+  it('should navigate when is clicked', function () {
+    const { getByRole } = render(<MovieBox {...props} />);
+    fireEvent.click(getByRole('link'));
+    expect(window.location.pathname).toBe(`/movie/${props.item.id}`);
   });
 });

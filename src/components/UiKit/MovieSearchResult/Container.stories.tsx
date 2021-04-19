@@ -1,10 +1,26 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 import Container from './Container';
+import { MemoryRouter } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+  position: relative;
+  height: 1px;
+`;
 
 export default {
   title: 'MovieSearch/Container',
   component: Container,
+  decorators: [
+    Story => (
+      <MemoryRouter>
+        <StyledContainer>
+          <Story />
+        </StyledContainer>
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<React.ComponentProps<typeof Container>> = args => (

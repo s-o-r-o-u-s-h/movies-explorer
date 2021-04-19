@@ -1,9 +1,14 @@
 import * as React from 'react';
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+  max-width: 1200px;
+`;
 
 const Page: React.FC = ({ children }) => {
   return (
     <>
-      <div className="ph-4 pv-5">{children}</div>
+      <StyledContainer className="mh-auto pv-5">{children}</StyledContainer>
     </>
   );
 };
