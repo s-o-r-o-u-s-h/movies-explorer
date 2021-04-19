@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { Movie } from '../../../models/api/Movie';
 import styled from 'styled-components';
 import { BaseImage } from '../Images';
 import { H6 } from '../Typography';
 import SmallText from '../Typography/SmallText';
 import { Link } from 'react-router-dom';
+import MoviePartial from '../../../models/api/MoviePartial';
 
 interface Props {
-  item: Pick<Movie, 'id' | 'title' | 'release_date' | 'poster_path'>;
+  item: MoviePartial;
 }
 
 const StyledContainer = styled.div`
