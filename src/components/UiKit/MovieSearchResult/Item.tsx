@@ -8,6 +8,7 @@ import MoviePartial from '../../../models/api/MoviePartial';
 
 interface Props {
   item: MoviePartial;
+  onPress: () => void;
 }
 
 const StyledContainer = styled.div`
@@ -24,16 +25,18 @@ const StyledContainer = styled.div`
     }
     & > div {
       width: 85%;
+      text-align: initial;
     }
   }
 `;
 
 const Item: React.VFC<Props> = ({
   item: { title, release_date, poster_path, id },
+  onPress,
 }) => {
   return (
     <StyledContainer className="p-1">
-      <Link to={`/movie/${id}`}>
+      <Link to={`/movie/${id}`} onClick={onPress}>
         <BaseImage src={poster_path} alt={title} title={title} />
         <div className="ph-2">
           <H6 className="mv-2">{title}</H6>

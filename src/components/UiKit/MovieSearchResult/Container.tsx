@@ -10,6 +10,7 @@ interface Props {
   loading?: boolean;
   emptyText?: string;
   items: Pick<Movie, 'id' | 'title' | 'release_date' | 'poster_path'>[];
+  onPress: () => void;
 }
 
 const StyledContainer = styled.div`
@@ -32,13 +33,18 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Container: React.VFC<Props> = ({ loading, emptyText, items }) => {
+const Container: React.VFC<Props> = ({
+  loading,
+  emptyText,
+  items,
+  onPress,
+}) => {
   return (
     <StyledContainer className="p-1">
       {loading ? (
         <CenteredLoading />
       ) : items.length > 0 ? (
-        items.map(item => <Item item={item} key={item.id} />)
+        items.map(item => <Item onPress={onPress} item={item} key={item.id} />)
       ) : (
         <CenteredElement>
           <H6>{emptyText}</H6>

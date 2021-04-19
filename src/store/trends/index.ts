@@ -26,14 +26,16 @@ export default function trendsReducer(
       let dataState: MoviePartial[];
 
       if (data.length > 10) {
-        dataState = data.slice(0, 10);
+        dataState = data.slice(0, 14);
       } else {
         dataState = data;
       }
 
       dataState = dataState.map(movie => ({
         ...movie,
-        poster_path: process.env['REACT_APP_TMDB_IMG_URL'] + movie.poster_path,
+        poster_path: movie.poster_path
+          ? process.env['REACT_APP_TMDB_IMG_URL'] + movie.poster_path
+          : (process.env['REACT_APP_FALLBACK_IMAGE_URL'] as string),
       }));
 
       return { ...initialState, data: dataState };

@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Provider } from 'react-redux';
 
-import Header from './UiKit/Header/Header';
+import Header from './Header/Header';
 import { CenteredLoading } from './UiKit/LoadingIndicator';
 import store from '../store/store';
 

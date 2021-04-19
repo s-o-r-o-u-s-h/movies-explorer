@@ -20,12 +20,10 @@ const StyledLink = styled.div`
 `;
 
 const MovieBox: React.VFC<Props> = ({ item }) => {
-  const url = process.env['REACT_APP_TMDB_IMG_URL'] + item.poster_path;
-
   return (
     <StyledLink>
       <Link to={`/movie/${item.id}`}>
-        <Image url={url} alt={item.title} />
+        <Image url={item.poster_path} alt={item.title} />
         <div className="mv-1">
           <H6>{item.title}</H6>
           <SmallText className="mv-1">{item.release_date}</SmallText>

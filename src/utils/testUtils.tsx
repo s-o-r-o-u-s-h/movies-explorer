@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render as rtlRender } from '@testing-library/react';
-import { ComponentType, ReactElement } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './mockedStore';
 
 function render(
   ui: React.ReactElement,
@@ -9,11 +10,19 @@ function render(
 ) {
   window.history.pushState({}, 'Test page', route);
 
-  function Wrapper({ children }: { children: React.ReactNode }): ReactElement {
-    return <BrowserRouter>{children}</BrowserRouter>;
+  function Wrapper({
+    children,
+  }: {
+    children: React.ReactNode;
+  }): React.ReactElement {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>{children}</BrowserRouter>
+      </Provider>
+    );
   }
   return rtlRender(ui, {
-    wrapper: Wrapper as ComponentType,
+    wrapper: Wrapper as React.ComponentType,
     ...renderOptions,
   });
 }

@@ -25,7 +25,9 @@ export default function searchReducer(
       const { data } = action.payload;
       const dataState = data.map(movie => ({
         ...movie,
-        poster_path: process.env['REACT_APP_TMDB_IMG_URL'] + movie.poster_path,
+        poster_path: movie.poster_path
+          ? process.env['REACT_APP_TMDB_IMG_URL'] + movie.poster_path
+          : (process.env['REACT_APP_FALLBACK_IMAGE_URL'] as string),
       }));
       return { ...initialState, data: dataState };
     case SearchTypes.SEARCH_FAILURE:
