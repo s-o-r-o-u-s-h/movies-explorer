@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './mockedStore';
+import { ToastContainer } from 'react-toastify';
 
 function render(
   ui: React.ReactElement,
@@ -18,6 +19,7 @@ function render(
     return (
       <Provider store={store}>
         <BrowserRouter>{children}</BrowserRouter>
+        <ToastContainer />
       </Provider>
     );
   }

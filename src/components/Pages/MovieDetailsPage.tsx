@@ -5,17 +5,24 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import { getMovieDetailsThunkAction } from '../../store/details/actions/getMovieDetailsThunkAction';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const MovieDetailsPage: React.VFC = () => {
   const { id } = useParams<{ id: any }>();
   const dispatch = useDispatch();
   const loading = useSelector((store: RootState) => store.details.loading);
   const data = useSelector((store: RootState) => store.details.item);
-  // const error = useSelector((store: RootState) => store.details.error);
+  const error = useSelector((store: RootState) => store.details.error);
 
   React.useEffect(() => {
     dispatch(getMovieDetailsThunkAction(id));
   }, [id, dispatch]);
+
+  React.useEffect(() => {
+    if (error) {
+      toast.error(error, {});
+    }
+  }, [error]);
 
   return (
     <Page>

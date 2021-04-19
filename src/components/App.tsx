@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import Header from './Header/Header';
 import { CenteredLoading } from './UiKit/LoadingIndicator';
 import store from '../store/store';
+import { ToastContainer } from 'react-toastify';
 
 library.add(fas, faCoffee, faSearch, faCalculator);
 
@@ -32,6 +33,7 @@ const App: React.VFC = () => {
           </Switch>
         </React.Suspense>
       </Router>
+      <ToastContainer />
     </Provider>
   );
 };
