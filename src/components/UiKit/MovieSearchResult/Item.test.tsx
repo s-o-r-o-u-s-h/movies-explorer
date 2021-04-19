@@ -57,6 +57,7 @@ describe('MovieResultItem component', () => {
 
       .c0 a > div {
         width: 85%;
+        text-align: initial;
       }
 
       <div

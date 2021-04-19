@@ -68,6 +68,10 @@ describe('MoviesSection component', () => {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
       }
 
       .c2 > div {
@@ -81,7 +85,7 @@ describe('MoviesSection component', () => {
           mocked-string
         </div>
         <div
-          class="c2"
+          class="c2 mv-2"
         >
           <div
             class="c3"
@@ -93,7 +97,7 @@ describe('MoviesSection component', () => {
                 alt="Godzilla vs. Kong"
                 class="c4 c5"
                 size="150"
-                src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+                src="/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
                 title="Godzilla vs. Kong"
               />
               <div
@@ -122,7 +126,7 @@ describe('MoviesSection component', () => {
                 alt="Godzilla vs. Kong"
                 class="c4 c5"
                 size="150"
-                src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+                src="/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
                 title="Godzilla vs. Kong"
               />
               <div

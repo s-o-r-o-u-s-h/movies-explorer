@@ -37,7 +37,9 @@ export default function detailsReducer(
 
       const item: MovieInfo = {
         title: movieItem.title,
-        image: process.env['REACT_APP_TMDB_IMG_URL'] + movieItem.poster_path,
+        image: movieItem.poster_path
+          ? process.env['REACT_APP_TMDB_IMG_URL'] + movieItem.poster_path
+          : (process.env['REACT_APP_FALLBACK_IMAGE_URL'] as string),
         cast: actors,
         director: directors,
         summary: movieItem.overview,

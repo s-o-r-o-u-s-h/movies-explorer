@@ -16,6 +16,7 @@ interface Props {
 const StyledList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   & > div {
     margin: 0.5rem;
   }
@@ -37,7 +38,7 @@ const MoviesSection: React.VFC<Props> = ({
           <H6>{emptyText}</H6>
         </CenteredElement>
       ) : (
-        <StyledList>
+        <StyledList className="mv-2">
           {items.map(item => (
             <MovieBox key={item.id} item={item} />
           ))}

@@ -56,7 +56,7 @@ describe('MovieBox component', () => {
             alt="Godzilla vs. Kong"
             class="c1 c2"
             size="150"
-            src="https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
+            src="/inNN466SKHNjbGmpfhfsaPQNleS.jpg"
             title="Godzilla vs. Kong"
           />
           <div

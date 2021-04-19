@@ -13,6 +13,7 @@ describe('MovieResultContainer component', () => {
           'https://image.tmdb.org/t/p/w400/inNN466SKHNjbGmpfhfsaPQNleS.jpg',
       },
     ],
+    onPress: jest.fn(),
   };
   it('should render MovieResult container', () => {
     const { container } = render(<Container {...props} />);
@@ -59,6 +60,7 @@ describe('MovieResultContainer component', () => {
 
       .c1 a > div {
         width: 85%;
+        text-align: initial;
       }
 
       .c0 {

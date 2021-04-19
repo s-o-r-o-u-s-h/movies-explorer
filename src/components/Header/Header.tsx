@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Logo } from '../Images';
-import { SearchInput } from '../Inputs';
+import { Logo } from '../UiKit/Images';
+import SearchInput from '../SearchInput/SearchInput';
+import { useDispatch } from 'react-redux';
+import { searchMoviesThunkAction } from '../../store/search/actions/searchMoviesThunkAction';
 
 const HeaderContainer = styled.header`
   background-color: var(--header-color);
@@ -31,6 +33,14 @@ const HeaderWrapper = styled.div`
 `;
 
 const Header: React.VFC = () => {
+  const dispatch = useDispatch();
+
+  const handleChangeQuery = (value: string) => {
+    if (value.length > 2) {
+      dispatch(searchMoviesThunkAction(value));
+    }
+  };
+
   return (
     <HeaderContainer>
       <HeaderWrapper className="p-2">
@@ -39,7 +49,7 @@ const Header: React.VFC = () => {
         </div>
         <div className="header-end">
           <SearchInput
-            onChangeQuery={() => {}}
+            onChangeQuery={handleChangeQuery}
             placeholder="Search movie titles..."
           />
         </div>
