@@ -46,7 +46,7 @@ const MovieDetails: React.VFC<Props> = ({ item, loading }) => {
         </>
       ) : (
         <CenteredElement>
-          <H6>Not found</H6>
+          <H6>Movie not found</H6>
         </CenteredElement>
       )}
     </div>

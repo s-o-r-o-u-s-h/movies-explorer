@@ -263,7 +263,7 @@ describe('MovieDetails component', () => {
   });
 
   it('should handle null item prop', function () {
-    const text = 'Not found';
+    const text = 'Movie not found';
     const { getByText, queryByText, container, rerender } = render(
       <MovieDetails {...props} item={null} />,
     );
@@ -289,7 +289,7 @@ describe('MovieDetails component', () => {
           <div
             class="c1 c2"
           >
-            Not found
+            Movie not found
           </div>
         </div>
       </div>
